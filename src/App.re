@@ -3,7 +3,12 @@ let component = ReasonReact.statelessComponent("App");
 Css.(
   global(
     "html, body, #root",
-    [width(pct(100.0)), height(pct(100.0)), display(flexBox)],
+    [
+      margin(px(0)),
+      width(pct(100.0)),
+      height(pct(100.0)),
+      display(flexBox),
+    ],
   )
 );
 
