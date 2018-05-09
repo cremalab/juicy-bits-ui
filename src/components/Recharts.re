@@ -2,15 +2,26 @@
 external responsiveContainer : ReasonReact.reactClass = "ResponsiveContainer";
 
 module ResponsiveContainer = {
-  let make = (~width: option(string)=?, ~height: option(string)=?, children) =>
+  let make = children =>
     ReasonReact.wrapJsForReason(
       ~reactClass=responsiveContainer,
-      ~props={
-        "width": Js.Nullable.fromOption(width),
-        "height": Js.Nullable.fromOption(height),
-      },
+      ~props={"width": "100%", "height": "100%"},
       children,
     );
+};
+
+module FlexContainer = {
+  let component = ReasonReact.statelessComponent("FlexContainer");
+  module Styles = {
+    let container = Css.(style([flexGrow(1)]));
+  };
+  let make = children => {
+    ...component,
+    render: _self =>
+      <div className=Styles.container>
+        <ResponsiveContainer> ...children </ResponsiveContainer>
+      </div>,
+  };
 };
 
 [@bs.module "recharts"]
