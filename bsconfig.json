@@ -5,18 +5,20 @@
     "subdirs": true
   },
   "bs-dependencies": [
-    "reason-react", 
-    "@glennsl/bs-jest", 
+    "reason-react",
+    "@glennsl/bs-jest",
     "bs-css"
   ],
   "reason": {
     "react-jsx": 2
   },
-  "bsc-flags": ["-bs-super-errors"],
+  "bsc-flags": [
+    "-bs-super-errors"
+  ],
   "refmt": 3,
   "package-specs": {
     "module": "es6",
-    "in-source": true
+    "in-source": false
   },
-  "suffix": ".bs.js"
+  "suffix": ".js"
 }
