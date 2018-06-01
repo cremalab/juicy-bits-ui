@@ -22,14 +22,19 @@ let make = _children => {
   ...component,
   render: _self =>
     <div className=Style.container>
-      ReactVis.(
-        <XYPlotFlexible>
-          <HorizontalGridLines />
-          <AreaSeries data=data1 color="#8884d8" opacity=0.7 />
-          <AreaSeries data=data0 color="#82ca9d" opacity=0.7 />
-          <XAxis />
-          <YAxis />
-        </XYPlotFlexible>
-      )
+      <CardPreview
+        title="Team Overview"
+        description="Vivamus eget nulla vitae felis bibendum iaculis sed vitae quam. Phasellus condimentum facilisis turpis quis molestie. Integer bibendum, lectus a hendrerit condimentum, nulla dui mattis nulla, ultrices sollicitudin."
+        route=Config.Routes.Fields
+        content=ReactVis.(
+                  <XYPlotFlexible>
+                    <HorizontalGridLines />
+                    <AreaSeries data=data1 color="#8884d8" opacity=0.7 />
+                    <AreaSeries data=data0 color="#82ca9d" opacity=0.7 />
+                    <XAxis />
+                    <YAxis />
+                  </XYPlotFlexible>
+                )
+      />
     </div>,
 };

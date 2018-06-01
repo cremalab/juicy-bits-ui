@@ -8,8 +8,7 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-vis": "^1.9.4",
-    "reason-scripts": "0.9.0",
-    "recharts": "^1.0.0-beta.10"
+    "reason-scripts": "0.9.0"
   },
   "scripts": {
     "start": "react-scripts start",

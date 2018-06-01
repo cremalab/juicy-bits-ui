@@ -1,7 +1,4 @@
-type route =
-  | Home
-  | Fields
-  | NotFound;
+open Config.Routes;
 
 type state = {currentRoute: route};
 
