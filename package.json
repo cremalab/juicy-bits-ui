@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bs-css": "^6.7.0",
+    "bs-storybook": "^0.1.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "reason-scripts": "0.9.0",
@@ -14,10 +15,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "prepare": "npm link bs-platform"
+    "prepare": "npm link bs-platform",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@glennsl/bs-jest": "^0.4.2",
-    "reason-react": "^0.4.1"
+    "reason-react": "^0.4.1",
+    "@storybook/react": "^3.4.6",
+    "@storybook/addon-actions": "^3.4.6",
+    "@storybook/addon-links": "^3.4.6"
   }
 }
