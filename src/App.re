@@ -1,3 +1,5 @@
+[%bs.raw {|require('../node_modules/react-vis/dist/style.css')|}];
+
 let component = ReasonReact.statelessComponent("App");
 
 Css.(
