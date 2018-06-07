@@ -1,10 +1,14 @@
 let component = ReasonReact.statelessComponent("LayoutMain");
 
 module Styles = {
+  open Theme;
   let container =
     Css.(style([flexGrow(1), flexDirection(column), display(flexBox)]));
   let header = Css.(style([display(flexBox), flexGrow(0)]));
-  let main = Css.(style([display(flexBox), flexGrow(1)]));
+  let main =
+    Css.(
+      style([display(flexBox), flexGrow(1), padding(px_of_spacing(`six))])
+    );
 };
 
 let make =
